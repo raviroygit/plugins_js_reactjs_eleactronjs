@@ -1,0 +1,12 @@
+repositories{    
+    google()
+    jcenter()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile(name:'BrotherPrintLibrary', ext:'aar')
+    compile(name:'print2.4.4.5160', ext:'aar')
+}

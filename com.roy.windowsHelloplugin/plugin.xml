@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.factionfour.windowsHello"
+    version="0.0.1">
+
+    <name>WindowsHello</name>
+    <description>Biometric authentication for Windows 10</description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <author>Faction Four Systems Inc.</author>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>    
+
+    <js-module src="www/windowshello.js" name="windowsHello">
+        <clobbers target="windowsHello" />
+    </js-module>
+
+	<platform name="windows">
+		<js-module src="src/windows/windowsHelloPluginProxy.js" name="WindowsHelloProxy">
+            <merges target="" />
+        </js-module>
+    </platform>
+</plugin>

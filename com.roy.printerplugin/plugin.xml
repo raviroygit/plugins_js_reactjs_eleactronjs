@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.factionfour.printerplugin"
+    version="0.0.1">
+
+    <name>F4Printer</name>
+    <description>Print to multiple printers from cordova</description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <author>Faction Four Systems Inc.</author>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>    
+
+    <js-module src="www/F4printer.js" name="F4Printer">
+        <clobbers target="F4Printer" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="F4Printer" >
+                <param name="android-package" value="com.factionfour.F4Printer.F4Printer"/>
+            </feature>
+        </config-file>
+        
+        <source-file src="src/android/F4Printer.java" target-dir="src/com/factionfour/F4Printer" />
+        
+        <framework src="src/android/F4Printer.gradle" custom="true" type="gradleReference" />
+
+        
+        <!--ZEBRA-->
+        <lib-file src="src/android/zebra/ZSDK_ANDROID_API.jar" arch="device" />
+        
+        <!--PRINTEK-->
+        <lib-file src="src/android/printek/print2.4.4.5160.aar" arch="device" />
+        <!--<lib-file src="src/android/printek/DsDpPrint1.8.jar" arch="device" />
+        
+        <resource-file src="src/android/printek/armeabi/libDSComm.so" target="jniLibs/armeabi/libDSComm.so" />
+        <resource-file src="src/android/printek/armeabi/libDSComm.so" target="jniLibs/x86/libDSComm.so" />
+        <resource-file src="src/android/printek/armeabi/libDSComm.so" target="jniLibs/armeabi-v7a/libDSComm.so" />
+        <resource-file src="src/android/printek/armeabi/libDSComm.so" target="jniLibs/arm64-v8a/libDSComm.so" />
+        <resource-file src="src/android/printek/armeabi/libDSComm.so" target="jniLibs/mips/libDSComm.so" />
+        
+        <resource-file src="src/android/printek/armeabi/libdascom.so" target="jniLibs/armeabi/libdascom.so" />
+        <resource-file src="src/android/printek/armeabi/libdascom.so" target="jniLibs/x86/libdascom.so" />
+        <resource-file src="src/android/printek/armeabi/libdascom.so" target="jniLibs/armeabi-v7a/libdascom.so" />
+        <resource-file src="src/android/printek/armeabi/libdascom.so" target="jniLibs/arm64-v8a/libdascom.so" />
+        <resource-file src="src/android/printek/armeabi/libdascom.so" target="jniLibs/mips/libdascom.so" />
+        
+        <resource-file src="src/android/printek/armeabi/libmupdf.so" target="jniLibs/armeabi/libmupdf.so" />
+        <resource-file src="src/android/printek/armeabi/libmupdf.so" target="jniLibs/x86/libmupdf.so" />
+        <resource-file src="src/android/printek/armeabi/libmupdf.so" target="jniLibs/armeabi-v7a/libmupdf.so" />
+        <resource-file src="src/android/printek/armeabi/libmupdf.so" target="jniLibs/arm64-v8a/libmupdf.so" />
+        <resource-file src="src/android/printek/armeabi/libmupdf.so" target="jniLibs/mips/libmupdf.so" />-->
+        
+        
+        <!--BROTHER-->
+        <lib-file src="src/android/brother/BrotherPrintLibrary.aar" />
+        
+        <resource-file src="src/android/brother/arm64-v8a/libcreatedata.so" target="jniLibs/arm64-v8a/libcreatedata.so" />
+        <resource-file src="src/android/brother/armeabi/libcreatedata.so" target="jniLibs/armeabi/libcreatedata.so" />
+        <resource-file src="src/android/brother/armeabi-v7a/libcreatedata.so" target="jniLibs/armeabi-v7a/libcreatedata.so" />
+        <resource-file src="src/android/brother/x86/libcreatedata.so" target="jniLibs/x86/libcreatedata.so" />
+        
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.BLUETOOTH" />
+            <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
+    </platform>
+
+    <platform name="ios">
+          
+        <config-file target="config.xml" parent="/*">
+          <feature name="F4Printer">
+            <param name="ios-package" value="F4Printer" />
+          </feature>
+        </config-file>
+
+        <source-file src="src/ios/F4Printer.m" />
+        <header-file src="src/ios/F4Printer.h" />
+        
+        <!--ZEBRA-->
+        <header-file src="src/ios/zebra/include/MfiBtPrinterConnection.h" />
+        <header-file src="src/ios/zebra/include/ZebraPrinterFactory.h" />
+        <header-file src="src/ios/zebra/include/ZebraPrinterConnection.h" />
+        <header-file src="src/ios/zebra/include/ZebraPrinter.h" />
+        <header-file src="src/ios/zebra/include/FormatUtil.h" />
+        <header-file src="src/ios/zebra/include/FileUtil.h" />
+        <header-file src="src/ios/zebra/include/PrinterStatus.h" />
+        <header-file src="src/ios/zebra/include/PrinterStatusMessages.h" />
+        <header-file src="src/ios/zebra/include/ZplPrintMode.h" />
+        <header-file src="src/ios/zebra/include/GraphicsUtil.h" />
+        <header-file src="src/ios/zebra/include/DiscoveredPrinter.h" />
+        <header-file src="src/ios/zebra/include/FieldDescriptionData.h" />
+        <header-file src="src/ios/zebra/include/DiscoveredPrinterNetwork.h" />
+        <header-file src="src/ios/zebra/include/MagCardReader.h" />
+        <header-file src="src/ios/zebra/include/NetworkDiscoverer.h" />
+        <header-file src="src/ios/zebra/include/SGD.h" />
+        <header-file src="src/ios/zebra/include/SmartCardReader.h" />
+        <header-file src="src/ios/zebra/include/ToolsUtil.h" />
+        <header-file src="src/ios/zebra/include/TcpPrinterConnection.h" />
+        <source-file src="src/ios/zebra/libZSDK_API.a" framework="true" />
+
+        <!--PRINTEK IS NOT SUPPORTED ON IOS-->
+        
+        <!--BROTHER-->
+        <!--all items are added via framework file-->
+        
+        
+        <framework src="ExternalAccessory.framework" />
+    </platform>
+    
+    <platform name="windows">
+        <!--GENERAL-->
+		<js-module src="src/windows/F4PrinterProxy.js" name="F4PrinterProxy">
+            <merges target="" />
+        </js-module>
+    </platform>
+    
+</plugin>

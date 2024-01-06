@@ -1,0 +1,26 @@
+{
+  "name": "com.factionfour.pdf_viewer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "webpack": "^3.0.0 || ^4.0.0-alpha.0 || ^4.0.0"
+  },
+  "dependencies": {
+    "node-ensure": "^0.0.0",
+    "worker-loader": "^2.0.0"
+  },
+  "browser": {
+    "fs": false,
+    "http": false,
+    "https": false,
+    "node-ensure": false,
+    "zlib": false
+  }
+}

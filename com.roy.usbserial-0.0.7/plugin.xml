@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    id="com.factionfour.usbserial"
+    version="0.0.7">
+    <name>Serial</name>
+    <description>Cordova plugin to communicate with the android USB serial port</description>
+    <license>MIT</license>
+    <keywords>serial,arduino</keywords>
+
+    <!-- js module -->
+    <js-module src="www/serial.js" name="Serial">
+        <clobbers target="window.serial" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Serial">
+                <param name="android-package" value="com.factionfour.usbserial.Serial"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/Serial.java" target-dir="src/com/factionfour/usbserial" />
+        <source-file src="src/android/UsbBroadcastReceiver.java" target-dir="src/com/factionfour/usbserial" />
+        <lib-file src="lib/usbseriallibrary.jar" arch="device" />
+        
+    </platform>
+		<platform name="windows">
+		<js-module src="src/windows/serialProxy.js" name="SerialProxy">
+            <merges target="" />
+        </js-module>
+    </platform>
+</plugin>

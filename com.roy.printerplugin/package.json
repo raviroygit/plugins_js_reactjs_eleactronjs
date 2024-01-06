@@ -1,0 +1,25 @@
+{
+  "name": "com.factionfour.printerplugin",
+  "version": "0.0.1",
+  "description": "Print to multiple printers from cordova",
+  "cordova": {
+    "id": "com.factionfour.printerplugin",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Faction Four Systems Inc.",
+  "license": "MIT"
+}

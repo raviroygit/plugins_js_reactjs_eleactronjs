@@ -1,0 +1,36 @@
+<======================= How to use =======================>
+
+
+1) import function using below written instruction.
+
+const { serialPortOpen, getDevices, closePort, listenData } = require('com.factionfour.usbserial/src/windows/usbSerial');
+
+2) Get all COM port devices list. 
+
+   const usbDevicesCallback = (result) => {
+       console.log(result,"COM device list');
+    }
+
+    getDevices(usbDevicesCallback) 
+
+3) Call and open serial port.
+
+    serialPortOpen(comPort, serialPortOpenCallback);
+ 
+    const serialPortOpenCallback = (res) => {
+        console.log(res,"is open port");
+    }
+
+4) Get/listen data from COM Port. return data in array buffer , decode to get exact data.
+
+   listenData(readDataCallBack); 
+
+    const readDataCallBack = (data) => {
+        console.log(data,"COM Port array buffer data ")
+    }
+
+5) Close/disconnect COM port.
+
+     closePort(async (res) => {
+            console.log(res,"disconnected")
+        });

@@ -1,0 +1,172 @@
+<================Setup QrCode,Barcode Scanner using Camera and image ==================>
+
+1. const { BarcodeScannerWithUserInterface, QrCodeScanner, QrCodeFormat } = require('com.factionfour.barcodescanner/index');
+          or 
+   import { BarcodeScannerWithUserInterface, QrCodeScanner, QrCodeFormat } from 'com.factionfour.barcodescanner/index';
+
+2. QrCodeFormat  is a enum for different-different for QR code. below mentioned type available 👇
+    {
+    QR_CODE = 0,
+    AZTEC = 1,
+    CODABAR = 2,
+    CODE_39 = 3,
+    CODE_93 = 4,
+    CODE_128 = 5,
+    DATA_MATRIX = 6,
+    MAXICODE = 7,
+    ITF = 8,
+    EAN_13 = 9,
+    EAN_8 = 10,
+    PDF_417 = 11,
+    RSS_14 = 12,
+    RSS_EXPANDED = 13,
+    UPC_A = 14,
+    UPC_E = 15,
+    UPC_EAN_EXTENSION = 16
+   }
+
+<------------ setup using BarcodeScannerWithUserInterface , with predefined UI -------------------------->
+
+3.) BarcodeScannerWithUserInterface is a predefined UI or userInterface. does't need to make UI and Error handling just 👇
+    
+    a)  <div id="reader" ></div> for render scanner.
+
+    b) <div id="result"></div> for result display on UI.
+
+    c) Configuration of BarcodeScannerWithUserInterface.
+        // for supported format see point 2.
+       
+     const config = { fps: 10, qrbox: { width: 250, height: 250 } };
+
+       const QrCodeScannerCustom = new QrCodeScanner("reader", {
+         formatsToSupport: [
+         QrCodeFormat.QR_CODE,
+         QrCodeFormat.CODE_93,
+         QrCodeFormat.CODE_39,
+         QrCodeFormat.CODABAR,
+        ]
+      });
+
+    d) Initialize UI 
+
+        QrCodeScannerCustom.render(onScanSuccessCallback);
+
+        function onScanSuccessCallback(decodedText, decodedResult) {
+         // decodedResult return html result
+         // decodedText return text result
+        }
+
+    e) Stop scanning function return promises
+       
+        QrCodeScannerCustom.stop().then((ignore) => {
+        QrCodeScannerCustom.clear();
+         }).catch((err) => {
+        // handle error here
+         });
+
+<------------ setup using BarcodeScannerWithUserInterface , with predefined UI -------------------------->
+
+4)  QrCodeScanner is a custom scanner class to control everything, also UI. example below 👇.
+
+   a) Initialize Scanner and Configuration.
+     // for supported format see point 2.
+
+      const config = { fps: 10, qrbox: { width: 250, height: 250 } };
+
+     const QrCodeScannerCustom = new QrCodeScanner("reader", {
+      formatsToSupport: [
+      QrCodeFormat.QR_CODE,
+      QrCodeFormat.CODE_93,
+      QrCodeFormat.CODE_39,
+      QrCodeFormat.CODABAR,
+         ]
+       });
+
+    b) Start scanner.
+
+       QrCodeScannerCustom.start({ facingMode: "environment" }, config, onScanSuccessCallback,onScanFailureCallback).catch((err) => {
+         // handle error when not connected device , etc...
+       });
+
+       function onScanSuccessCallback(decodedText, decodedResult) {
+         // decodedResult return html result
+         // decodedText return text result
+        }
+
+         function onScanFailureCallback(err) {
+         // error return return
+        }
+
+    c) Stop scanning function return promises
+       
+        QrCodeScannerCustom.stop().then((ignore) => {
+        QrCodeScannerCustom.clear();
+         }).catch((err) => {
+       // handle error here
+         });
+
+     d) Change camera. like different device or front, back camera.
+        1) Get the camera Id from mentioned point 5.
+
+        2) Setup different camera. 
+           QrCodeScannerCustom.start(cameraId, config, onScanSuccessCallback,onScanFailureCallback);
+
+        3) Change camera direction , front to back
+         
+           QrCodeScannerCustom.start({ facingMode: "environment" }, config, qrCodeSuccessCallback);
+
+        4) Change camera direction , back to front
+         
+           html5QrCode.start({ facingMode: "user" }, config, qrCodeSuccessCallback);
+         
+
+5) Get All Camera device connected .
+
+   QrCodeScanner.getCameras().then(devices => {
+  /**
+   * devices would be an array of objects of type:
+   * { id: "id", label: "label" }
+   */
+      if (devices && devices.length) {
+    var cameraId = devices[0].id;
+    // .. use this to start scanning.
+     }
+    }).catch(err => {
+  // handle err
+   });
+
+
+6) Scan QrCode, barcode using image 
+
+   a) Initialize Scanner and Configuration.
+       // for supported format see point 2.
+      const config = { fps: 10, qrbox: { width: 250, height: 250 } };
+
+     const QrCodeScannerCustom = new QrCodeScanner("reader", {
+      formatsToSupport: [
+      QrCodeFormat.QR_CODE,
+      QrCodeFormat.CODE_93,
+      QrCodeFormat.CODE_39,
+      QrCodeFormat.CODABAR,
+         ]
+       });
+
+   b) Scan image. 
+     
+       QrCodeScannerCustom.scanFile(imageFile, true)
+       .then(decodedText => {
+        // success, use decodedText
+         console.log(decodedText);
+          })
+          .catch(err => {
+         // failure, handle it.
+        console.log(`Error scanning file. Reason: ${err}`)
+         });
+
+    c) Stop scanning function return promises
+       
+        QrCodeScannerCustom.stop().then((ignore) => {
+        QrCodeScannerCustom.clear();
+         }).catch((err) => {
+        // handle error here
+         });

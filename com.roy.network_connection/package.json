@@ -1,0 +1,43 @@
+{
+  "name": "com.factionfour.network_connection",
+  "version": "1.0.0",
+  "description": "Factionfour Network Information",
+  "types": "./types/index.d.ts",
+  "cordova": {
+    "id": "com.factionfour.network_connection",
+    "platforms": [
+      "android",
+      "ios",
+      "windows",
+      "browser"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "network",
+    "information",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-windows",
+    "cordova-browser"
+  ],
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "eslint ."
+  },
+  "author": "Factionfour",
+  "engines": {
+    "cordovaDependencies": {
+      "3.0.0": {
+        "cordova": ">=9"
+      },
+      "4.0.0": {
+        "cordova": ">100"
+      }
+    }
+  },
+  "devDependencies": {
+    "@cordova/eslint-config": "^3.0.0"
+  }
+}

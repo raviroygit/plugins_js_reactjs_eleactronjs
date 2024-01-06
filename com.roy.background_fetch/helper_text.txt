@@ -1,0 +1,70 @@
+<============================ Setup background task ====================>
+
+1) how to import or require function
+
+    const { scheduleTask, taskConfiguration, taskStatus, stopTaskById, removeTaskById, backgroundTask, runningTaskIds } = require('com.factionfour.background_fetch')
+
+2) Task configuration (use for scheduling the background task config) 👇
+
+    taskConfiguration = {
+    runImmediately: false,
+    days: null,
+    hours: null,
+    minutes: null,
+    seconds: null,
+    milliseconds: null,
+    taskId: ""
+  };
+
+3) Schedule background task
+
+   a) configure tha task (see in step 1.)
+   b) call scheduleTask function
+
+   example: 
+
+   c) configuration for scheduling task
+     taskConfiguration.seconds = 1;
+     taskConfiguration.taskId = "bgTask"
+
+   d) Start scheduleTask 
+
+    const taskToDo = () => {
+      console.log("task running in background!");
+    }
+    scheduleTask(taskToDo, (err) => { console.log(err) });
+
+4) Stop background task by taskId
+
+  example:
+
+    stopTaskById(taskId="bgTask",
+     (res) => {
+         console.log(res, "res from stopTaskById task")
+     });
+
+5) Remove task permanently by taskId
+
+ example:
+
+   removeTaskById(taskId="bgTask",
+    (res) => {
+         console.log(res, "res from remove task by id") 
+    });
+      
+6)Current running Background task information 
+
+   example:
+      console.log(backgroundTask);
+
+7) Get Background task by taskId 
+
+ example: 
+
+    backgroundTask.getById(taskId);
+
+8) Find all running background task id
+
+  example: 
+
+     console.log(runningTaskIds)

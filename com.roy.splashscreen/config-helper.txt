@@ -1,0 +1,25 @@
+<===================================== Setup Splashscreen ============================>
+
+1) Create directory resources/splash in root of project.
+
+2) Add splash.css and splash.html file of custom splashscreen .
+
+3) Import plugin like below mentioned 👇.
+  
+      const { startSplashscreen, stopSplashscreen } = require('com.factionfour.splashscreen');
+
+4) Add startSplashscreen and stopSplashscreen inside ready-to-show callback functon 👇.
+
+       mainWindow.once('ready-to-show', async () => {
+     
+         startSplashscreen();
+
+          await stopSplashscreen();
+
+       });
+
+5) By default splashscreen work for 2 seconds. How to delay splashscreen?
+   
+   Pass time in milisecond inside the stopSplashscreen(time_in_milisecond) example 👇.
+  
+    await stopSplashscreen(10000);

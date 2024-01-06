@@ -1,0 +1,21 @@
+<============== How to use ==================>
+
+1) Import file like below written.
+  
+    const device = require('com.factionfour.device/src/windows/Device');
+
+2) Device return object of information below mentioned
+
+    device_name
+    os_type
+    platform
+    architecture
+    cpu
+    free_memory
+    total_memory
+    home_dir
+    machine
+    network_adaptor
+    user_info
+    version
+    os_variant

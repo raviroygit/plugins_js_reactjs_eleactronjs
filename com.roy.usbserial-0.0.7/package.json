@@ -1,0 +1,35 @@
+{
+  "name": "com.factionfour.usbserial",
+  "version": "0.0.8",
+  "description": "Cordova plugin to communicate with the android USB serial port",
+  "main":"src/windows/usb.js",
+  "cordova": {
+    "id": "com.factionfour.usbserial",
+    "platforms": [
+      "android",
+      "ubuntu",
+      "electron"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xseignard/cordovarduino.git"
+  },
+  "keywords": [
+    "serial",
+    "arduino",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ubuntu"
+  ],
+  "author": "Xavier Seignard <xavier.seignard@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xseignard/cordovarduino/issues"
+  },
+  "homepage": "https://github.com/xseignard/cordovarduino#readme",
+  "dependencies": {
+    "usb": "^2.9.0",
+    "serialport": "^11.0.0"
+  }
+}

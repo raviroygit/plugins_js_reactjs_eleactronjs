@@ -1,0 +1,36 @@
+<===================== Setup configuration ===================>
+
+1) How to import package 
+
+   import { geoLocationPermission, getLocation } from 'com.factionfour.geolocation';
+                      Or
+   const { geoLocationPermission, getLocation } = require('com.factionfour.geolocation');
+
+2) How to get location permission 
+
+   geoLocationPermission((res) => {
+      if (res === "granted") {
+        console.log("Location permission granted!");
+      }
+      else{
+        console.log("Location permission denied!");
+      }
+   });
+
+3) How to get location coords 
+
+   getLocation(
+      (location) => {
+        console.log("Latitude",location.latitude);
+         console.log("Longitude",location.longitude);
+         console.log("Accuracy",location.accuracy);
+       }, 
+        (err) => {
+          console.log("Location permission denied",err);
+         }
+       )
+
+
+4) Error 403 of googleapis then put Google map API key in main js file 
+
+   example:   process.env.GOOGLE_API_KEY = 'YOUR_GOOGLE_API_KEY'

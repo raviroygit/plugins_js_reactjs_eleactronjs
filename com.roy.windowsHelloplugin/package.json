@@ -1,0 +1,26 @@
+{
+  "name": "com.factionfour.windowsHelloplugin",
+  "version": "0.0.1",
+  "description": "Print to zebra linkOS printer from cordova",
+  "main": "index.js",
+  "cordova": {
+    "id": "com.factionfour.windowsHelloplugin",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Faction Four Systems Inc.",
+  "license": "MIT"
+}

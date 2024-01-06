@@ -1,0 +1,217 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "windowshello/1.0.0": {
+        "dependencies": {
+          "Extended.Wpf.Toolkit": "4.5.0",
+          "Microsoft.AI.MachineLearning": "1.15.0",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.14",
+          "WindowsContracts.Net.Foundation.UniversalApiContract": "5.19041.10"
+        },
+        "runtime": {
+          "windowshello.dll": {}
+        }
+      },
+      "Extended.Wpf.Toolkit/4.5.0": {
+        "runtime": {
+          "lib/net5.0/Xceed.Wpf.AvalonDock.NET5.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.0"
+          },
+          "lib/net5.0/Xceed.Wpf.AvalonDock.Themes.Aero.NET5.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.0"
+          },
+          "lib/net5.0/Xceed.Wpf.AvalonDock.Themes.Metro.NET5.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.0"
+          },
+          "lib/net5.0/Xceed.Wpf.AvalonDock.Themes.VS2010.NET5.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.0"
+          },
+          "lib/net5.0/Xceed.Wpf.Toolkit.NET5.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.0"
+          }
+        },
+        "resources": {
+          "lib/net5.0/cs-CZ/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "cs-CZ"
+          },
+          "lib/net5.0/de/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net5.0/es/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net5.0/fr/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net5.0/hu/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net5.0/it/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net5.0/ja-JP/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "ja-JP"
+          },
+          "lib/net5.0/pt-BR/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net5.0/ro/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "ro"
+          },
+          "lib/net5.0/ru/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net5.0/sv/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net5.0/zh-Hans/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "zh-Hans"
+          }
+        }
+      },
+      "Microsoft.AI.DirectML/1.12.0": {},
+      "Microsoft.AI.MachineLearning/1.15.0": {
+        "dependencies": {
+          "Microsoft.AI.DirectML": "1.12.0"
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AI.MachineLearning.Interop.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.2.14": {},
+      "Microsoft.Windows.CsWinRT/1.2.5": {
+        "runtime": {
+          "lib/net5.0/WinRT.Host.Shim.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/net5.0/WinRT.Runtime.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.5.35112"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win-x64/native/WinRT.Host.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/WinRT.Host.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "WindowsContracts.Net.Foundation.FoundationContract/5.19041.4.1": {
+        "dependencies": {
+          "Microsoft.Windows.CsWinRT": "1.2.5"
+        },
+        "runtime": {
+          "lib/net5.0/Windows.Foundation.FoundationContract.dll": {
+            "assemblyVersion": "5.19041.4.1",
+            "fileVersion": "5.19041.4.1"
+          }
+        }
+      },
+      "WindowsContracts.Net.Foundation.UniversalApiContract/5.19041.10": {
+        "dependencies": {
+          "WindowsContracts.Net.Networking.Connectivity.WwanContract": "5.19041.2.1"
+        },
+        "runtime": {
+          "lib/net5.0/Windows.Foundation.UniversalApiContract.dll": {
+            "assemblyVersion": "5.19041.10.0",
+            "fileVersion": "5.19041.10.0"
+          }
+        }
+      },
+      "WindowsContracts.Net.Networking.Connectivity.WwanContract/5.19041.2.1": {
+        "dependencies": {
+          "WindowsContracts.Net.Foundation.FoundationContract": "5.19041.4.1"
+        },
+        "runtime": {
+          "lib/net5.0/Windows.Networking.Connectivity.WwanContract.dll": {
+            "assemblyVersion": "5.19041.2.1",
+            "fileVersion": "5.19041.2.1"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "windowshello/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Extended.Wpf.Toolkit/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oQP6Qyuz+3kETAC/s+cBEfb8Vzbju6pB7Q5czW4KdkAOpFJTA/SCox8caH6HLQxQ6Lwq2jCeSQOPJKlnpqpFOg==",
+      "path": "extended.wpf.toolkit/4.5.0",
+      "hashPath": "extended.wpf.toolkit.4.5.0.nupkg.sha512"
+    },
+    "Microsoft.AI.DirectML/1.12.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GvexdRa11PYxzb3vU/U7stc/dpx4SDQ/A8q/mQfba9LHdxx3nQSKzArq1YWUzEZPQ3+j5AZkpJuybWa0oo1EnQ==",
+      "path": "microsoft.ai.directml/1.12.0",
+      "hashPath": "microsoft.ai.directml.1.12.0.nupkg.sha512"
+    },
+    "Microsoft.AI.MachineLearning/1.15.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SvgddZcKypoteMXXhsk8Mde6NjEGUkv8nECqeoOjVKC9Zgtd9FUlnU9qgSMDnfDIb8VV9tnaA8VHoLHsi+32PQ==",
+      "path": "microsoft.ai.machinelearning/1.15.0",
+      "hashPath": "microsoft.ai.machinelearning.1.15.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.UniversalWindowsPlatform/6.2.14": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7Mi4cS8JQ7gqm+W+SRCq13c2Rr0yZTuczC9EbV6gRigE2ZhQalnLHyat0ZshT5HDMSkFDxTyjwZymUgFuv3+eg==",
+      "path": "microsoft.netcore.universalwindowsplatform/6.2.14",
+      "hashPath": "microsoft.netcore.universalwindowsplatform.6.2.14.nupkg.sha512"
+    },
+    "Microsoft.Windows.CsWinRT/1.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QdAMoqlnqHBsLL/p9L4uuu9EbjVTvwGXDLNZ9HUaOynEvsQomPgnz36za9rsyVvmZZAzoXtjDC6bUl2uCzo0nw==",
+      "path": "microsoft.windows.cswinrt/1.2.5",
+      "hashPath": "microsoft.windows.cswinrt.1.2.5.nupkg.sha512"
+    },
+    "WindowsContracts.Net.Foundation.FoundationContract/5.19041.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z3jJQXy9Qt3Bh3xcomS2TKSIgHOrV6lLTMj0AAew/X9/iwGoc4wHH7gFsAWtGc5TTzVfiG1JVOIaFD4yqPFhsQ==",
+      "path": "windowscontracts.net.foundation.foundationcontract/5.19041.4.1",
+      "hashPath": "windowscontracts.net.foundation.foundationcontract.5.19041.4.1.nupkg.sha512"
+    },
+    "WindowsContracts.Net.Foundation.UniversalApiContract/5.19041.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mfl2YNPuE1vTrShan7RkayqkD4I3VF0LD37Rhuv2OeI8B2sxpzAcLlsjxvGZ1SlEMiWt52bAuMu1HwZfCi4VJg==",
+      "path": "windowscontracts.net.foundation.universalapicontract/5.19041.10",
+      "hashPath": "windowscontracts.net.foundation.universalapicontract.5.19041.10.nupkg.sha512"
+    },
+    "WindowsContracts.Net.Networking.Connectivity.WwanContract/5.19041.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qFTT8Gf3GhDyFa/791h/g+TrK3hSvXK5/dIY/ud3WYWAvG3NVoXtE7FRWauwz7P4c3Qy5Drclldb5Lt1TlYX0Q==",
+      "path": "windowscontracts.net.networking.connectivity.wwancontract/5.19041.2.1",
+      "hashPath": "windowscontracts.net.networking.connectivity.wwancontract.5.19041.2.1.nupkg.sha512"
+    }
+  }
+}

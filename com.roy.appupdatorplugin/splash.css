@@ -1,0 +1,120 @@
+/* body {
+    background-color: #333335;
+    color: #fff;
+   
+}
+
+.flex {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto
+}
+    .loader {
+        border: 5px solid rgba(18, 65, 145, 255);
+        border-radius: 50%;
+        border-top: 5px solid #ffffff;
+        width: 40px;
+        height: 40px;
+        -webkit-animation: spin 1s linear infinite;
+        
+        animation: spin 1s linear infinite;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0px;
+        bottom: 0;
+        position: fixed;
+    }
+
+    
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .center {
+        border: none !important;
+        text-align: center;
+    } */
+    @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Oleo+Script&family=Poppins:wght@200;300;400&display=swap');
+
+    *{ 
+        box-sizing: border-box;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+      }
+      body{
+        width: 100%;
+        height: 100vh;
+        background: #1b262c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff
+      }
+      .wrapper{
+        width: 450px;
+        height: 250px;
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .loader{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: relative;
+        background:conic-gradient(violet, indigo, blue, green, yellow, orange, red);
+        animation: 2s rotate linear infinite;
+      }
+      
+      .loader:before{
+        position: absolute;
+        content: '';
+        width: calc(100% - 5px);
+        height: calc(100% - 5px);
+        background: #17262c;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+      }
+      .loader:after{
+        position: absolute;
+        content: '';
+        z-index: -3;
+        width: calc(100% + 10px);
+        height: calc(100% + 10px);
+        background: inherit;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        filter: blur(25px);
+        border-radius: 50%;
+      }
+      @keyframes rotate{
+        from{ 
+          transform: rotate(0deg);
+        }
+        to{
+          transform: rotate(360deg);
+        }
+      }

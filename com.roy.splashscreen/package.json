@@ -1,0 +1,22 @@
+{
+  "name": "com.factionfour.splashscreen",
+  "version": "1.0.0",
+  "description": "Splashscreen for electron app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SAURABHTY02/com.factionfour.splashscreen.git"
+  },
+  "keywords": [
+    "splashscreen"
+  ],
+  "author": "com.factionfour.splashscreen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SAURABHTY02/com.factionfour.splashscreen/issues"
+  },
+  "homepage": "https://github.com/SAURABHTY02/com.factionfour.splashscreen#readme"
+}

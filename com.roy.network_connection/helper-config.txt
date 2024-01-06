@@ -1,0 +1,13 @@
+<================== How to use =====================>
+
+1) Import plugin like below mentioned
+
+   const checkInternet = require('com.factionfour.network_connection/src/windows/NetworkInfo');
+
+2) How to get network information.
+  
+   const checkInternetCallback = (res) => {
+        console.log(res, 'network')
+    }
+
+    checkInternet(checkInternetCallback);
